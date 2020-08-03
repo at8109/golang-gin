@@ -1,0 +1,24 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] Loaded HTML Templates (4): 
+	- 
+	- footer.html
+	- header.html
+	- index.html
+
+[GIN-debug] POST   /login                    --> main.main.func1 (3 handlers)
+[GIN-debug] GET    /api/videos               --> main.main.func2 (4 handlers)
+[GIN-debug] POST   /api/videos               --> main.main.func3 (4 handlers)
+[GIN-debug] GET    /view/videos              --> github.com/at8109/golang-gin-poc/controller.VideoController.ShowAll-fm (3 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2020/08/02 - 21:19:38 | 404 |            0s |             ::1 | GET      "/login"
+[GIN] 2020/08/02 - 21:22:18 | 200 |      1.0022ms |             ::1 | POST     "/login"
+[GIN] 2020/08/02 - 21:23:50 | 401 |            0s |             ::1 | POST     "/login"
+[GIN] 2020/08/02 - 21:24:52 | 401 |            0s |             ::1 | POST     "/login"
+[GIN] 2020/08/02 - 21:25:02 | 200 |            0s |             ::1 | POST     "/login"
+[GIN] 2020/08/02 - 21:25:37 | 200 |     10.0016ms |             ::1 | POST     "/api/videos"
+[GIN] 2020/08/02 - 21:26:16 | 200 |       3.003ms |             ::1 | GET      "/api/videos"
